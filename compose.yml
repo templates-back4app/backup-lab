@@ -1,0 +1,21 @@
+# A database and five places a backup might live. They differ in exactly one
+# way: what can reach them.
+services:
+  db:
+    image: mongo:7
+    command: ["--quiet"]
+    volumes:
+      - data:/data/db                        # the database itself
+      - data:/backup/in-data-volume          # 2. beside the data
+      - spare:/backup/other-volume           # 3. another volume, same host
+      - ./project-backups:/backup/in-project # 4. a dump in the project folder
+    # /backup/in-container is the container's own writable layer       (1)
+    # the offsite directory is not mounted here at all                 (5)
+  vault:
+    image: mongo:7
+    command: ["sleep", "infinity"]
+    volumes:
+      - ${OFFSITE:-/tmp/backup-lab-offsite}:/vault   # 5. only this container writes here
+volumes:
+  data:
+  spare:
