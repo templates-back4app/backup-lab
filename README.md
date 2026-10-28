@@ -1,10 +1,14 @@
 # backup-lab
 
+[![Deploy on Back4app](https://img.shields.io/badge/Deploy%20on-Back4app-1568B8?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTEyIDJMMiA3djEwbDEwIDUgMTAtNVY3eiIvPjwvc3ZnPg==)](https://www.back4app.com/signup?utm_source=github&utm_medium=repo&utm_campaign=backup-lab)
+
 One dump, written to five places that differ in exactly one way: **what can reach
 them**. Then five ways of losing the data, each against a freshly built stack.
 
 A backup counts only if restoring it gives the rows back, so every surviving
 archive is actually restored and its rows counted.
+
+> **Read the article:** [Where to Keep Database Backups So the Command That Deletes Your Data Can't Reach Them](https://www.back4app.com/blog/database-backups-that-survive-deletion?utm_source=github&utm_medium=repo&utm_campaign=backup-lab)
 
 ## Run it
 
